@@ -915,6 +915,22 @@
 	sound_env = LARGE_ENCLOSED
 	req_access = list(access_hangar)
 
+/area/quartermaster/hangar
+	name = "\improper Hangar Deck"
+	icon_state = "hangar"
+	sound_env = LARGE_ENCLOSED
+	req_access = list(access_hangar)
+
+/area/quartermaster/hangar/top ///DELETE AFTER DUMBASS (IF THIS IS IN THE COMMIT I FUCKED UP)
+	name = "\improper Hangar Upper Walkway"
+	req_access = list()
+
+/area/quartermaster/flightcontrol  ///DELETE AFTER DUMBASS (IF THIS IS IN THE COMMIT I FUCKED UP)
+	name = "\improper Flight Control Tower"
+	icon_state = "hangar"
+	req_access = list(access_hangar)
+
+
 /area/quartermaster/hangar/catwalks_port
 	name = "\improper Hangar Port Upper Walkway"
 	req_access = list()
