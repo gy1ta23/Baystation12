@@ -29,8 +29,8 @@ General Public License version 3.
 
 
 <h3 id="modules">Modules
-<aside>(205 modules,
-    181/4306 macros, 4.2%)</aside></h3>
+<aside>(209 modules,
+    192/4332 macros, 4.4%)</aside></h3>
 <ul class="index-tree modules">
     <li><a href="(builtins).html" title="(builtins)">(builtins)</a></li>
     <li class="has-children"><span title="code">code</span><ul class="index-tree">
@@ -50,6 +50,7 @@ General Public License version 3.
     <li><a href="code/__defines/misc.html" title="code&#x2F;__defines&#x2F;misc">misc</a></li>
     <li><a href="code/__defines/mobs.html" title="code&#x2F;__defines&#x2F;mobs">mobs</a></li>
     <li><a href="code/__defines/singletons.html" title="code&#x2F;__defines&#x2F;singletons">singletons</a></li>
+    <li><a href="code/__defines/zmimic.html" title="code&#x2F;__defines&#x2F;zmimic">zmimic</a></li>
     </ul></li>
     <li><a href="code/__spaceman_dmm.html" title="code&#x2F;__spaceman_dmm">__spaceman_dmm</a></li>
     <li class="has-children"><span title="code&#x2F;_helpers">_helpers</span><ul class="index-tree">
@@ -83,6 +84,7 @@ General Public License version 3.
     <li class="has-children"><span title="code&#x2F;datums">datums</span><ul class="index-tree">
     <li><a href="code/datums/ai_law_sets.html" title="code&#x2F;datums&#x2F;ai_law_sets">ai_law_sets</a></li>
     <li><a href="code/datums/beam.html" title="code&#x2F;datums&#x2F;beam">beam</a></li>
+    <li><a href="code/datums/callbacks.html" title="code&#x2F;datums&#x2F;callbacks">callbacks</a></li>
     <li><a href="code/datums/category.html" title="code&#x2F;datums&#x2F;category">category</a></li>
     <li class="has-children"><span title="code&#x2F;datums&#x2F;extensions">extensions</span><ul class="index-tree">
     <li><span class="no-substance">scent&#x2F;</span><a href="code/datums/extensions/scent/_scent.html" title="code&#x2F;datums&#x2F;extensions&#x2F;scent&#x2F;_scent">_scent</a></li>
@@ -153,6 +155,7 @@ General Public License version 3.
     <li class="has-children"><span title="code&#x2F;game&#x2F;objects&#x2F;effects">effects</span><ul class="index-tree">
     <li><a href="code/game/objects/effects/effect_system.html" title="code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;effect_system">effect_system</a></li>
     <li><span class="no-substance">fire&#x2F;</span><a href="code/game/objects/effects/fire/fire.html" title="code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;fire&#x2F;fire">fire</a></li>
+    <li><a href="code/game/objects/effects/misc.html" title="code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;misc">misc</a></li>
     <li><a href="code/game/objects/effects/overlays.html" title="code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;overlays">overlays</a></li>
     <li><a href="code/game/objects/effects/spiders.html" title="code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;spiders">spiders</a></li>
     </ul></li>
@@ -341,6 +344,7 @@ General Public License version 3.
     </ul></li>
     <li><span class="no-substance">job&#x2F;</span><a href="maps/torch/job/torch_access.html" title="maps&#x2F;torch&#x2F;job&#x2F;torch_access">torch_access</a></li>
     <li><span class="no-substance">loadout&#x2F;</span><a href="maps/torch/loadout/loadout_accessories.html" title="maps&#x2F;torch&#x2F;loadout&#x2F;loadout_accessories">loadout_accessories</a></li>
+    <li><a href="maps/torch/torch_simplemobs.html" title="maps&#x2F;torch&#x2F;torch_simplemobs">torch_simplemobs</a></li>
     </ul></li>
     </ul></li>
     </ul>
@@ -348,7 +352,7 @@ General Public License version 3.
 
 
 <h3 id="types">Types
-<aside>(231 detailed/495 documented/20127 total, 2.5%)</aside></h3>
+<aside>(240 detailed/509 documented/20217 total, 2.5%)</aside></h3>
 <ul class="index-tree">
     <li><a href="global.html" title="(global)">(global)</a></li>
     <li class="has-children"><a href="area.html" title="&#x2F;area">area</a><ul class="index-tree">
@@ -471,6 +475,7 @@ Null key is always #000000.</li>
     <li><a href="datum/controller/subsystem/ticker.html" title="&#x2F;datum&#x2F;controller&#x2F;subsystem&#x2F;ticker">ticker</a></li>
     <li><a href="datum/controller/subsystem/timer.html" title="&#x2F;datum&#x2F;controller&#x2F;subsystem&#x2F;timer">timer</a></li>
     <li><a href="datum/controller/subsystem/typing.html" title="&#x2F;datum&#x2F;controller&#x2F;subsystem&#x2F;typing">typing</a></li>
+    <li><a href="datum/controller/subsystem/zcopy.html" title="&#x2F;datum&#x2F;controller&#x2F;subsystem&#x2F;zcopy">zcopy</a></li>
     </ul></li>
     </ul></li>
     <li><a href="datum/design.html" title="&#x2F;datum&#x2F;design">design</a></li>
@@ -481,6 +486,7 @@ Then do start() to start it and stop() to stop it, obviously
 and don't call start() in a loop that will be repeated otherwise it'll get spammed!<ul class="index-tree">
     <li><span class="no-substance" title="&#x2F;datum&#x2F;effect&#x2F;effect&#x2F;system&#x2F;trail&#x2F;steam">steam</span> - Attach a steam trail to an object (eg. a reacting beaker) that will follow it</li>
     </ul></li>
+    <li><span class="no-substance">event&#x2F;</span><a href="datum/event/mob_spawning.html" title="&#x2F;datum&#x2F;event&#x2F;mob_spawning">mob_spawning</a></li>
     <li class="has-children"><span title="&#x2F;datum&#x2F;extension">extension</span><ul class="index-tree">
     <li><span class="no-substance">interactive&#x2F;</span><a href="datum/extension/interactive/ntos.html" title="&#x2F;datum&#x2F;extension&#x2F;interactive&#x2F;ntos">ntos</a></li>
     <li class="has-children"><span title="&#x2F;datum&#x2F;extension&#x2F;scent">scent</span> - Scent extensions
@@ -521,6 +527,7 @@ Variable model is one full map line (e.g /turf/unsimulated/wall{icon_state = &qu
     </ul></li>
     <li><a href="datum/map.html" title="&#x2F;datum&#x2F;map">map</a></li>
     <li><span class="no-substance" title="&#x2F;datum&#x2F;memory">memory</span> - Memories</li>
+    <li><a href="datum/microwave_recipe.html" title="&#x2F;datum&#x2F;microwave_recipe">microwave_recipe</a></li>
     <li><span class="no-substance" title="&#x2F;datum&#x2F;mil_branch">mil_branch</span> - A single military branch, such as Fleet or Marines</li>
     <li><a href="datum/mil_branches.html" title="&#x2F;datum&#x2F;mil_branches">mil_branches</a> - Global object for handling branches</li>
     <li><a href="datum/mil_rank.html" title="&#x2F;datum&#x2F;mil_rank">mil_rank</a> - A military rank</li>
@@ -539,6 +546,7 @@ Variable model is one full map line (e.g /turf/unsimulated/wall{icon_state = &qu
     <li><span class="no-substance">node&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;node&#x2F;test">test</span> - Helpers</li>
     <li><a href="datum/ntnet.html" title="&#x2F;datum&#x2F;ntnet">ntnet</a></li>
     <li><a href="datum/pai_software.html" title="&#x2F;datum&#x2F;pai_software">pai_software</a></li>
+    <li><a href="datum/player_info.html" title="&#x2F;datum&#x2F;player_info">player_info</a></li>
     <li><a href="datum/powernet.html" title="&#x2F;datum&#x2F;powernet">powernet</a></li>
     <li><span class="no-substance">progressbar&#x2F;</span><a href="datum/progressbar/public.html" title="&#x2F;datum&#x2F;progressbar&#x2F;public">public</a></li>
     <li class="has-children"><a href="datum/reagent.html" title="&#x2F;datum&#x2F;reagent">reagent</a><ul class="index-tree">
@@ -686,6 +694,15 @@ Parameters: var/obj/item/card/id</li>
     <li><span class="no-substance" title="&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;construct&#x2F;wraith">wraith</span> - Wraith</li>
     </ul></li>
     <li class="has-children"><span title="&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;hostile">hostile</span><ul class="index-tree">
+    <li class="has-children"><span class="no-substance" title="&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;hostile&#x2F;fleet">fleet</span><ul class="index-tree">
+    <li class="has-children"><span class="no-substance" title="&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;hostile&#x2F;fleet&#x2F;ranged">ranged</span> - Pistol<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;hostile&#x2F;fleet&#x2F;ranged&#x2F;bullpup">bullpup</span> - Bullpup</li>
+    <li><span class="no-substance" title="&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;hostile&#x2F;fleet&#x2F;ranged&#x2F;leader">leader</span> - Team Leader</li>
+    </ul></li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;hostile&#x2F;fleet&#x2F;space">space</span> - Rigsuit<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;hostile&#x2F;fleet&#x2F;space&#x2F;ranged">ranged</span> - Rigsuit - Bullpup</li>
+    </ul></li>
+    </ul></li>
     <li class="has-children"><span title="&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;hostile&#x2F;giant_spider">giant_spider</span><ul class="index-tree">
     <li><a href="mob/living/simple_animal/hostile/giant_spider/carrier.html" title="&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;hostile&#x2F;giant_spider&#x2F;carrier">carrier</a></li>
     <li><a href="mob/living/simple_animal/hostile/giant_spider/lurker.html" title="&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;hostile&#x2F;giant_spider&#x2F;lurker">lurker</a></li>
@@ -708,7 +725,7 @@ This is an obj because raw atoms can't be placed in DM or third-party mapping to
     <li><span class="no-substance">decal&#x2F;cleanable&#x2F;blood&#x2F;</span><a href="obj/effect/decal/cleanable/blood/tracks.html" title="&#x2F;obj&#x2F;effect&#x2F;decal&#x2F;cleanable&#x2F;blood&#x2F;tracks">tracks</a></li>
     <li class="has-children"><span title="&#x2F;obj&#x2F;effect&#x2F;effect">effect</span><ul class="index-tree">
     <li><a href="obj/effect/effect/smoke.html" title="&#x2F;obj&#x2F;effect&#x2F;effect&#x2F;smoke">smoke</a> - SMOKE SYSTEMS</li>
-    <li><span class="no-substance" title="&#x2F;obj&#x2F;effect&#x2F;effect&#x2F;warp">warp</span> - Example of a warp filter for /renderer use</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;effect&#x2F;effect&#x2F;warp">warp</span> - Example of a warp filter</li>
     </ul></li>
     <li><a href="obj/effect/fusion_em_field.html" title="&#x2F;obj&#x2F;effect&#x2F;fusion_em_field">fusion_em_field</a></li>
     <li><span class="no-substance">gateway&#x2F;artifact&#x2F;</span><a href="obj/effect/gateway/artifact/big.html" title="&#x2F;obj&#x2F;effect&#x2F;gateway&#x2F;artifact&#x2F;big">big</a></li>
@@ -814,7 +831,7 @@ TO-DO -- Using it as a power measurement tool for cables etc. Nannek.</li>
     <li><span class="no-substance">dice&#x2F;d20&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;dice&#x2F;d20&#x2F;cursed">cursed</span> - Cursed Dice</li>
     <li><span class="no-substance">flame&#x2F;lighter&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;flame&#x2F;lighter&#x2F;zippo">zippo</span> - Zippo</li>
     <li><span class="no-substance">grenade&#x2F;</span><a href="obj/item/grenade/spawnergrenade.html" title="&#x2F;obj&#x2F;item&#x2F;grenade&#x2F;spawnergrenade">spawnergrenade</a></li>
-    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun">gun</span><ul class="index-tree">
+    <li class="has-children"><a href="obj/item/gun.html" title="&#x2F;obj&#x2F;item&#x2F;gun">gun</a><ul class="index-tree">
     <li><span class="no-substance">energy&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;lasertag">lasertag</span> - Laser Tag</li>
     <li><span class="no-substance">projectile&#x2F;revolver&#x2F;medium&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;projectile&#x2F;revolver&#x2F;medium&#x2F;captain">captain</span> - Weapons</li>
     </ul></li>
@@ -942,6 +959,11 @@ files in particular are also available.<ul class="index-tree">
     <li class="has-children"><a href="obj/item/storage.html" title="&#x2F;obj&#x2F;item&#x2F;storage">storage</a><ul class="index-tree">
     <li><a href="obj/item/storage/backpack.html" title="&#x2F;obj&#x2F;item&#x2F;storage&#x2F;backpack">backpack</a></li>
     <li><span class="no-substance">belt&#x2F;utility&#x2F;</span><a href="obj/item/storage/belt/utility/full.html" title="&#x2F;obj&#x2F;item&#x2F;storage&#x2F;belt&#x2F;utility&#x2F;full">full</a></li>
+    <li class="has-children"><a href="obj/item/storage/fancy.html" title="&#x2F;obj&#x2F;item&#x2F;storage&#x2F;fancy">fancy</a><ul class="index-tree">
+    <li class="has-children"><a href="obj/item/storage/fancy/smokable.html" title="&#x2F;obj&#x2F;item&#x2F;storage&#x2F;fancy&#x2F;smokable">smokable</a><ul class="index-tree">
+    <li><a href="obj/item/storage/fancy/smokable/antag.html" title="&#x2F;obj&#x2F;item&#x2F;storage&#x2F;fancy&#x2F;smokable&#x2F;antag">antag</a></li>
+    </ul></li>
+    </ul></li>
     <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;storage&#x2F;photo_album">photo_album</span> - photo album</li>
     <li class="has-children"><a href="obj/item/storage/wallet.html" title="&#x2F;obj&#x2F;item&#x2F;storage&#x2F;wallet">wallet</a><ul class="index-tree">
     <li><a href="obj/item/storage/wallet/random.html" title="&#x2F;obj&#x2F;item&#x2F;storage&#x2F;wallet&#x2F;random">random</a></li>
@@ -1060,6 +1082,7 @@ unlikely that you'll need to modify this</li>
     </ul></li>
     <li><a href="singleton/instance_pool.html" title="&#x2F;singleton&#x2F;instance_pool">instance_pool</a></li>
     <li><span class="no-substance" title="&#x2F;singleton&#x2F;memory_options">memory_options</span> - Memory Options</li>
+    <li><a href="singleton/rank_category.html" title="&#x2F;singleton&#x2F;rank_category">rank_category</a> - Categories of ranks</li>
     <li><span class="no-substance" title="&#x2F;singleton&#x2F;scent_intensity">scent_intensity</span> - Scent intensity</li>
     <li><a href="singleton/state_transition.html" title="&#x2F;singleton&#x2F;state_transition">state_transition</a> - Used to connect <code>/singleton/state</code>s together so the FSM knows what state to switch to, and on what conditions.
 On a directed graph, these would be the arrows connecting the nodes representing states.</li>
@@ -1085,7 +1108,7 @@ On a directed graph, these would be the arrows connecting the nodes representing
 </main>
 <footer>
     baystation12.dme
-    <a href="https://github.com/gy1ta23/oic/tree/e53aeb6ba11513ffb639d6ed945caced923b16a0">e53aeb6</a>
+    <a href="https://github.com/gy1ta23/oic/tree/6e1072ba657b676c51a74989cbcc638c18c85c7e">6e1072b</a>
         (dev) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
 </body>
 </html>
