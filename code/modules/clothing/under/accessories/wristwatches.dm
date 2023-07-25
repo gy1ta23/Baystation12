@@ -13,5 +13,16 @@
 
 /obj/item/clothing/accessory/wristwatches/fancy
 	name = "fancy wrist watch"
-	desc = "A simple time keeping device. It probably cost more than your education."
+	desc = "An extravagant time keeping device. It probably cost more than your education."
 	icon_state = "wristwatch_fancy"
+
+/obj/item/clothing/wrists/watch/examine(mob/user)
+	..()
+	if (in_range(src, user))
+		checktime()
+
+/obj/item/clothing/wrists/watch/verb/checktime()
+	set name = "Check Time"
+	set category = "Object"
+	set src in usr
+	to_chat(usr, "You check your watch. The hands read '[stationtime2text()]'.")
